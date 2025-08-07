@@ -1,0 +1,20 @@
+[project]
+name = "mcpdemo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "evidently>=0.7.12",
+    "fastmcp>=2.3.0rc1",
+    "langchain-community>=0.3.27",
+    "langchain-core>=0.3.73",
+    "langchain-groq>=0.3.7",
+    "langchain-openai>=0.3.28",
+    "langgraph>=0.6.4",
+    "matplotlib>=3.10.5",
+    "mcp>=1.12.3",
+    "numpy>=2.3.2",
+    "pandas>=2.3.1",
+    "scipy>=1.16.1",
+]
