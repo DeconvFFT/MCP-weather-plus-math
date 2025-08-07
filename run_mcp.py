@@ -15,7 +15,7 @@ def start_weather_server():
     try:
         # Start weather server in background
         process = subprocess.Popen(
-            ["python", "weather.py"],
+            ["python", "servers/weather.py"],
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE
         )
@@ -46,21 +46,21 @@ def main():
     try:
         if mode == "math-only":
             print("🧮 Running MCP client with math server only...")
-            subprocess.run(["python", "mcpclient.py"])
+            subprocess.run(["python", "clients/mcpclient.py"])
             
         elif mode == "with-weather":
             print("🌤️  Starting weather server...")
             weather_process = start_weather_server()
             if weather_process:
                 print("🧮 Running MCP client with both servers...")
-                subprocess.run(["python", "mcpclient.py"])
+                subprocess.run(["python", "clients/mcpclient.py"])
             else:
                 print("❌ Failed to start weather server, running math-only...")
-                subprocess.run(["python", "mcpclient.py"])
+                subprocess.run(["python", "clients/mcpclient.py"])
                 
         elif mode == "auto":
             print("🤖 Auto-detecting available servers...")
-            subprocess.run(["python", "mcpclient.py"])
+            subprocess.run(["python", "clients/mcpclient.py"])
             
         else:
             print(f"❌ Unknown mode: {mode}")

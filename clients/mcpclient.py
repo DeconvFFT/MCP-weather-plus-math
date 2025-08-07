@@ -26,7 +26,7 @@ async def main():
         client = MultiServerMCPClient({
             "math": {
                 "command": "python",
-                "args": ["mathserver.py"],
+                "args": ["servers/mathserver.py"],
                 "transport": "stdio",
             },
             "weather": {
@@ -38,7 +38,7 @@ async def main():
         client = MultiServerMCPClient({
             "math": {
                 "command": "python",
-                "args": ["mathserver.py"],
+                "args": ["servers/mathserver.py"],
                 "transport": "stdio",
             }
         })
